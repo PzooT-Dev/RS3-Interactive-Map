@@ -97,16 +97,6 @@ export var CollectionControl = L.Control.extend({
             this._toggleCollectionMode(this._polyArea, "polyarea_converter", e.target);
         });
 
-        // Path control
-        this._createControl('<img src="./css/images/path-icon.png" alt="Path" title="Path" height="30" width="30">', container, function(e) {
-            this._toggleCollectionMode(this._path, "path_converter", e.target);
-        });
-
-        // Dax Path control
-        this._createControl('<img src="./css/images/dax-path-icon.png" alt="Dax Path" title="Dax Path" height="25" width="30">', container, function(e) {
-            this._toggleCollectionMode(this._daxPath, "path_converter", e.target);
-        });
-
         // Undo control
         this._createControl('<i class="fa fa-undo" aria-hidden="true"></i>', container, function(e) {
             if (this._currentDrawable !== undefined) {
@@ -132,7 +122,7 @@ export var CollectionControl = L.Control.extend({
         var context = this;
         $("#output-type").on('change', () => context._outputCode());
         $("#code-output").on('input propertychange paste', () => context._loadFromText());
-        $("#bot-api").on('change', () => context._outputCode());
+        //$("#bot-api").on('change', () => context._outputCode());
 
         return container;
     },
