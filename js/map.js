@@ -42,7 +42,7 @@ $(document).ready(function () {
         if (map.tile_layer !== undefined) {
             map.removeLayer(map.tile_layer);
         }
-        map.tile_layer = L.tileLayer('./output/' + map.plane + '/{z}/{x}/{y}.png', {
+        map.tile_layer = L.tileLayer('https://raw.githubusercontent.com/PzooT-Dev/RS3-Map-Data/main/output/' + map.plane + '/{z}/{x}/{y}.png', {
             minZoom: 3,
             maxZoom: 11,
             attribution: 'Map data',
