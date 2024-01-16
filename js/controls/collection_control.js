@@ -121,7 +121,7 @@ export var CollectionControl = L.Control.extend({
         var context = this;
         $("#output-type").on('change', () => context._outputCode());
         $("#code-output").on('input propertychange paste', () => context._loadFromText());
-        $("#bot-api").on('change', () => context._outputCode());
+        //$("#bot-api").on('change', () => context._outputCode());
 
         return container;
     },
@@ -213,7 +213,7 @@ export var CollectionControl = L.Control.extend({
         this._editing = true;
         $(element).closest("a.leaflet-control-custom").addClass("active");
         
-        "BotWithUs" = converter;
+        this._currentConverter = "BotWithUs";
 
         $("#code-output-panel").show("slide", {direction: "right"}, 300);
 
