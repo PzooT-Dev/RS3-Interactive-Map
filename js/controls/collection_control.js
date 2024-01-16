@@ -3,7 +3,6 @@
 import {Position} from '../model/Position.js';
 import {Area} from '../model/Area.js';
 import {Path} from '../model/Path.js';
-//import {DaxPath} from '../model/DaxPath.js';
 import {Areas} from '../model/Areas.js';
 import {PolyArea} from '../model/PolyArea.js';
 
@@ -122,7 +121,7 @@ export var CollectionControl = L.Control.extend({
         var context = this;
         $("#output-type").on('change', () => context._outputCode());
         $("#code-output").on('input propertychange paste', () => context._loadFromText());
-        //$("#bot-api").on('change', () => context._outputCode());
+        $("#bot-api").on('change', () => context._outputCode());
 
         return container;
     },
@@ -140,12 +139,7 @@ export var CollectionControl = L.Control.extend({
 
         var position = Position.fromLatLng(this._map, e.latlng, this._map.plane);
 
-        if (this._currentDrawable instanceof DaxPath) {
-            let self = this;
-            this._currentDrawable.add(position, function() {
-                self._outputCode();
-            });
-        } else if (this._currentDrawable instanceof Areas) {
+        if (this._currentDrawable instanceof Areas) {
             if (this._firstSelectedAreaPosition === undefined) {
                 this._firstSelectedAreaPosition = position;
             } else {
@@ -219,7 +213,7 @@ export var CollectionControl = L.Control.extend({
         this._editing = true;
         $(element).closest("a.leaflet-control-custom").addClass("active");
         
-        this._currentConverter = converter;
+        "BotWithUs" = converter;
 
         $("#code-output-panel").show("slide", {direction: "right"}, 300);
 
