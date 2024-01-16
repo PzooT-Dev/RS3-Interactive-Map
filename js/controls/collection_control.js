@@ -246,7 +246,7 @@ export var CollectionControl = L.Control.extend({
         var output = "";
 
         if (this._currentDrawable !== undefined) {
-            var botAPI = $("#bot-api option:selected").text();
+            var botAPI = "BotWithUs";
             output = converters[botAPI][this._currentConverter].toJava(this._currentDrawable);
         }
 
@@ -255,7 +255,7 @@ export var CollectionControl = L.Control.extend({
     
     _loadFromText: function() {
         if (this._currentDrawable !== undefined) {
-            var botAPI = $("#bot-api option:selected").text();
+            var botAPI = "BotWithUs";
             converters[botAPI][this._currentConverter].fromJava($("#code-output").text(), this._currentDrawable);
         }
     },
