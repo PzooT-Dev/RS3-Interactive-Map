@@ -1,4 +1,0 @@
-python F:\downloads\geopackage-python-master\scripts\rgi\tiling\gdal2tiles_parallel.py -p raster -z 3-11 -e E:\Nexus3-881\mapimagedump\full_image_0.png F:/explv_bri-master/output/0/
-python F:\downloads\geopackage-python-master\scripts\rgi\tiling\gdal2tiles_parallel.py -p raster -z 3-11 -e E:\Nexus3-881\mapimagedump\full_image_1.png F:/explv_bri-master/output/1/
-python F:\downloads\geopackage-python-master\scripts\rgi\tiling\gdal2tiles_parallel.py -p raster -z 3-11 -e E:\Nexus3-881\mapimagedump\full_image_2.png F:/explv_bri-master/output/2/
-python F:\downloads\geopackage-python-master\scripts\rgi\tiling\gdal2tiles_parallel.py -p raster -z 3-11 -e E:\Nexus3-881\mapimagedump\full_image_3.png F:/explv_bri-master/output/3/
