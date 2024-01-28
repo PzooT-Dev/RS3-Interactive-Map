@@ -99,7 +99,7 @@ $(document).ready(function () {
     map.on('move', setUrlParams);
     map.on('zoom', setUrlParams);
 
-    let zoom = 7;
+    let zoom = 0;
 	const center = new Position(Number(3200), Number(3200), Number(0));
     let centreLatLng = center.toLatLng(map)
 
@@ -116,7 +116,7 @@ $(document).ready(function () {
         const region = new Region(Number(urlRegionID));
         const centrePos = region.toCentrePosition()
         centreLatLng = centrePos.toLatLng(map);
-        zoom = urlZoom || 9;
+        zoom = urlZoom || 0;
     }
 
     map.setView(centreLatLng, zoom)
